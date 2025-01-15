@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import styles from "./Cart.module.css";
-// import { createPortal } from "react-dom";
+
 function Cart() {
     const cart = useSelector((state) => state.cart);
     const totalAmount = cart.reduce(
@@ -25,12 +25,12 @@ function Cart() {
                     <CartItem key={cartItem.id} {...cartItem} />
                 ))}
             </div>
-            <section> Total Amount : &#8377;{totalAmount}</section>
-            <br />
-            <button onClick={() => window.location.href = '/' } className={styles.continueShoppingBtn}>
-                Continue Shopping
-            </button>
-            <strong> New Amount: &#8377;{newAmount}</strong>
+            <section>
+                 <div >Total Amount : &#8377;{totalAmount}</div>
+                 <article> New Amount: &#8377;{newAmount}</article>
+            </section>
+        
+            
             
         </div>
     );

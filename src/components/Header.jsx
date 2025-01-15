@@ -5,7 +5,16 @@ import styles from "./Header.module.css";
 import Container from "./Container";
 import { BsCartFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
+
+
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+    const navigate = useNavigate();
+
+  const handleShopClick = () => {
+    navigate('/');
+  };
     const cart = useSelector((state) => state.cart);
     const totalQuantity = cart.reduce((acc, item) => {
         return acc + item.quantity;
@@ -24,8 +33,10 @@ function Header() {
     return (
         <header className={styles.header}>
             <Container>
-                <nav className={styles.nav}>
-                    <h1>Shop</h1>
+                <nav className={styles.nav}> 
+                
+                    <button  onClick={() => window.location.href = '/' } className={styles.title} >Shop</button>
+                  
                     <button
                         className={styles.showCartBtn}
                         onClick={() => {
@@ -40,7 +51,7 @@ function Header() {
                                 </span>
                             )}
                         </span>
-                        <span>Cart</span>
+                        <span className={styles.cartText}>Cart</span>
                     </button>
                 </nav>
             </Container>

@@ -42,7 +42,7 @@ function CartItem({ id, price, img, title, quantity }) {
                         <AiOutlinePlus />
                     </button>
                 </div>
-                <p> &#8377;{price * quantity}</p>
+                <p> Rs. {price * quantity}</p>
                 <button
                     className={styles.removeItemBtn}
                     onClick={() => {

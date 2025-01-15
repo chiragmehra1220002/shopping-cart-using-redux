@@ -6,7 +6,7 @@ import Container from "./Container";
 function Products() {
     return (
         <Container>
-            <h1>Best of Shop</h1>
+            <h1 className={styles.title}>Best of Shop</h1>
             <div className={styles.products}>
                 {products.map((product) => (
                     <Product key={product.id} {...product} />

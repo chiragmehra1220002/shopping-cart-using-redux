@@ -3,7 +3,7 @@ export const products = [
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack",
-      "price": 1095,
+      "price": 3999,
       "img": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     
     },
@@ -47,14 +47,14 @@ export const products = [
     
     {
       "id": 7,
-      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "title": "Pierced Owl Rose Gold Plated ",
       "price": 1099,
       "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
       "img": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     },
     {
       "id": 8,
-      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+      "title": "WD 2TB  External Hard Drive - USB 3.0 ",
       "price": 640,
       "img": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     },
@@ -116,7 +116,7 @@ export const products = [
     },
     {
       "id": 18,
-      "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+      "title": "DANVOUY Womens T Shirt Casual ",
       "price": 599,
       
 
