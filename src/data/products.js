@@ -2,7 +2,7 @@
 export const products = [
     {
       "id": 1,
-      "title": "Fjallraven - Foldsack No. 1 Backpack",
+      "title": "Fjallraven - Foldsack No. 1 Backpack ",
       "price": 3999,
       "img": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     
@@ -17,20 +17,20 @@ export const products = [
     },
     {
       "id": 3,
-      "title": "Mens Cotton Jacket",
+      "title": "Mens Casual Premium Slim Fit T-Shirts " ,
       "price": 599,
       "img": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     },
     {
       "id": 4,
-      "title": "Mens Casual Slim Fit",
+      "title": "Mens Casual Premium Slim Fit T-Shirts  ",
       "price": 399,
       "img": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
      
     },
     {
       "id": 5,
-      "title": "John Hardy Women's Braclet",
+      "title": "John Hardy Women's Braclet         ",
       "price": 695,
      
       "img": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",

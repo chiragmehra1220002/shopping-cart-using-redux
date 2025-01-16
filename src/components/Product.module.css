@@ -31,7 +31,10 @@
     justify-content: center;
     flex-wrap: wrap;
     flex:1;
+    color:#C16452;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
+
 .price {
     font-weight: 700;
     color: black;

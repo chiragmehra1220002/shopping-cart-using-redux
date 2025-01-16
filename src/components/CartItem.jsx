@@ -9,52 +9,80 @@ import {
     removeItemFromCart,
 } from "../features/cartSlice";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 function CartItem({ id, price, img, title, quantity }) {
     const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart);
+    const totalAmount = cart.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
+    const discount = totalAmount * 0.1;
+    const newAmount = totalAmount - discount;
+
     return (
+        <>
         <div className={styles.cartItem}>
            
             <div className={styles.imgAndTitle}>
                 <div className={styles.imgContainer}>
                     <img src={img} alt={title} className={styles.cartImage} />
                 </div>
-                <h3>{title}</h3>
-            </div>
-           
-            <div className={styles.otherControls}>
-                <div className={styles.qtyInput}>
-                    <button
-                        onClick={() => {
-                            if (quantity <= 1) {
-                                return;
-                            }
-                            dispatch(decreaseQty({ id }));
-                        }}
-                    >
-                        <AiOutlineMinus />
-                    </button>
-                    <span className={styles.quantityDisplay}>{quantity}</span>
-                    <button
-                        onClick={() => {
-                            dispatch(increaseQty({ id }));
-                        }}
-                    >
-                        <AiOutlinePlus />
-                    </button>
+                <div className={styles.title}>
+                    <h3>{title}</h3>
                 </div>
-                <p> Rs. {price * quantity}</p>
+               
+            </div>
+           <div className="controls">
+                <div className={styles.qtyInput}>
+                        <button
+                            onClick={() => {
+                                if (quantity <= 1) {
+                                    return;
+                                }
+                                dispatch(decreaseQty({ id }));
+                            }}
+                        >
+                            <AiOutlineMinus className={styles.plus}/>
+                        </button>
+                        <span className={styles.quantityDisplay}>{quantity}</span>
+                        <button
+                            onClick={() => {
+                                dispatch(increaseQty({ id }));
+                            }}
+                        >
+                            <AiOutlinePlus className={styles.plus} />
+                        </button>
+                     
+                        
+                    
+                </div>
                 <button
                     className={styles.removeItemBtn}
                     onClick={() => {
-                        dispatch(removeItemFromCart({ id }));
-                    }}
+                                dispatch(removeItemFromCart({ id }));
+                            }}
                 >
-                    <ImCross />
+                 Remove   <ImCross className={styles.cross}/>
                 </button>
             </div>
+           
+
+            
+            <p> Rs. {price * quantity}</p>
+            <section >
+                 <div  >&#8377;{totalAmount}</div>
+                 <article> {newAmount}</article>
+            </section>
+                
+        
             
         </div>
+       
+        </>
+        
     );
+       
 }
 
 export default CartItem;

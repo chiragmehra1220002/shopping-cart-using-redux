@@ -18,21 +18,30 @@ function Cart() {
                 </center > 
                 
     return (
+        <>
         <div className={styles.cart}>
             <h2 className={styles.cartHeading}>Shopping Cart</h2>
             <div>
+                <div className={styles.cartItems}>
+                    <span>Product</span>
+                    <span className={styles.quantity1}>Quantity</span>
+                    <span className={styles.price1}>Price</span>
+                    <span>Total</span>
+                </div>
+                <hr />
                 {cart.map((cartItem) => (
                     <CartItem key={cartItem.id} {...cartItem} />
                 ))}
             </div>
-            <section>
-                 <div >Total Amount : &#8377;{totalAmount}</div>
-                 <article> New Amount: &#8377;{newAmount}</article>
-            </section>
+          
         
             
             
         </div>
+        <div className={styles.subtotal}>
+        <h2>Subtotal:Rs. {newAmount}</h2>
+      </div>
+      </>
     );
 }
 

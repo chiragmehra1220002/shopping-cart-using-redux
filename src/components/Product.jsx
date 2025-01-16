@@ -40,7 +40,7 @@ function Product({ id, title, price, img }) {
         onClick={handleAddToCart}
         disabled={addedToCart || isProductInCart}
         style={ButtonStyles}
-        appearance="primary" 
+        appearance="#C16452" 
       >
         Add to Cart
       </Button>
